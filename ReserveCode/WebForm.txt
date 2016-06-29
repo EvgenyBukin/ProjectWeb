@@ -1,0 +1,24 @@
+<div class="content">
+            <%
+                foreach (AniClubWeb.Models.Anime freme in GetAnimes())
+                {
+                    Response.Write(String.Format(@"
+                    <div class='item'>
+                        <h3>{0}</h3>
+                        {1}
+                    <img src='{2}' alt='img1'>
+                    </div>",
+                    freme.Name, freme.Text, freme.Img1));
+                }
+             %>
+        </div>
+        <div>
+            <%
+                for(int i = 1; i <=MaxPage; i++)
+                {
+                    Response.Write(
+                        String.Format("<a href='/Pages/Listing.aspx?page={0}' {1}>{2}</a>",
+                        i, i == CurrentPage ? "class='selected'" : "", i));
+                }
+            %>
+</div>

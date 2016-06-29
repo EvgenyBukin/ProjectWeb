@@ -1,0 +1,63 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AnimeNews.master.cs" Inherits="AniClubWeb.Pages.AnimeNews" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="utf-8" />
+    <title>AniClubNews</title>
+    <link rel='shortcut icon' href='/Content/Img/favicon.ico' type='image/x-icon' />
+    <link rel='stylesheet' type='text/css' href='/Content/CSS/newsContent.css' />
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css' />
+    <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css' />
+    <link href='https://fonts.googleapis.com/css?family=Cuprum' rel='stylesheet' type='text/css' />
+    <link href='https://fonts.googleapis.com/css?family=Economica' rel='stylesheet' type='text/css' />
+    
+    <link rel='stylesheet' href='/Content/CSS/jquery.mCustomScrollbar.css' />
+    <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+    <script src='/scripts/jquery.mCustomScrollbar.concat.min.js'></script>
+    <script src='/scripts/Scroller.js'></script>
+    <script src='/scripts/ModalScripts.js'></script>
+    <script src='/scripts/ModalAnimations.js'></script>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <header class="newsHeader">
+				<div class="logWebsite"></div>
+                <div class="logWebsite1"></div>
+			</header>
+            <nav>
+				<div class="main-nav">
+					<div id="categories">
+                        <GS:CategoryLinks runat="server" />
+					</div>
+				</div>
+			</nav>
+            <div class="wrapDecoration">
+                <div id="BackgroundDecoration_1"></div>
+            </div>
+            <main role="main" class="newsModuleContent">
+                <section>
+                    <div>
+                        <asp:ContentPlaceHolder ID="bodyContent" runat="server" />
+                    </div>
+				</section>
+			</main>
+            <footer class="footer">
+				<div class="footerModule1">
+					<a href="#" class="footerIqon"></a>
+					<a href="#" class="footerIqon"></a>
+					<a href="#" class="footerIqon"></a>
+					<a href="#" class="footerIqon"></a>
+					<a href="#" class="footerIqon"></a>
+					<a href="#" class="footerIqon"></a>
+				</div>
+				<div class="footerModule2">
+					<span>Demo version of the website. Forbidden to be copied.</span>
+				</div>
+			</footer>
+		</div>
+     </form>
+</body>
+</html>

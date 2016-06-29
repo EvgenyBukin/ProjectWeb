@@ -1,0 +1,41 @@
+<!DOCTYPE HTML> 
+<html> 
+<head> 
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script> 
+$(document).ready(function () {
+	//var elems = $('.source1');
+	//var elemsTotal = elems.length;
+
+	 $('.video').each(function(i){
+	 	var source = $(this).find('.source1');
+	 	source.attr('id', i);
+	 	if(source.attr('src')){
+	 		$(this).css({ 'display': 'block' });
+	 	} else {
+	 		$(this).css({ 'display': 'none' });
+	 	}
+	 });
+
+	/*for(var i = 0; i< elemsTotal; ++i){
+		$(elems[i]).attr('id', i);
+		var source = document.getElementById(i);
+		var widgetName = source.getAttribute('src');
+		if (widgetName == '') {
+		    $('.video').css({ 'display': 'none' });
+		} else {
+		    $('.video').css({ 'display': 'block' });
+		}
+	}*/
+});
+</script>     
+</head> 
+<body>
+      <video class='video' width='400' height='300' controls='controls'>
+        <source class='source1' src='dsad'>
+      </video>
+      <video class='video' width='400' height='300' controls='controls'>
+        <source class='source1' src=''>
+      </video>
+</body> 
+</html>

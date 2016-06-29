@@ -1,0 +1,24 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AnimeGallery.master.cs" Inherits="AniClubWeb.Pages.AnimeGallery" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <div id="header">
+            <div class="title">GameStore - магазин компьютерных игр</div>
+        </div>
+        <div id="categories">
+                <GS:GCategoryLinks runat="server" />
+            </div>
+        <div>
+            <asp:ContentPlaceHolder ID="bodyContent" runat="server" />
+        </div>
+    </div>
+    </form>
+</body>
+</html>

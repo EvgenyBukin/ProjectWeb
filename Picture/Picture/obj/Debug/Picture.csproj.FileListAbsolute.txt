@@ -1,0 +1,5 @@
+C:\Users\Gelion\Desktop\project\Picture\Picture\bin\Debug\Picture.exe.config
+C:\Users\Gelion\Desktop\project\Picture\Picture\obj\Debug\Picture.csprojResolveAssemblyReference.cache
+C:\Users\Gelion\Desktop\project\Picture\Picture\obj\Debug\Picture.Form1.resources
+C:\Users\Gelion\Desktop\project\Picture\Picture\obj\Debug\Picture.Properties.Resources.resources
+C:\Users\Gelion\Desktop\project\Picture\Picture\obj\Debug\Picture.csproj.GenerateResource.Cache

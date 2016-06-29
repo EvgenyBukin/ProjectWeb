@@ -1,0 +1,16 @@
+GO
+CREATE TABLE AnimeGs
+(
+	[AnId] INT NOT NULL PRIMARY KEY IDENTITY,
+	[Hashtag] NVARCHAR(250) NOT NULL,
+	[SGImg] NVARCHAR(250) NOT NULL,
+	[GName] NVARCHAR(1800) NOT NULL
+)
+
+GO
+
+INSERT INTO AnimeGs(Hashtag, SGImg, GName) 
+VALUES 
+	('#SAO', '/Content/Img/News01Img1.png', 'Sword Art Online'),
+	('#SAO', '/Content/Img/News01Img1.png', 'Sword Art Online');
+	
