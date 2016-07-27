@@ -18,7 +18,9 @@
     </div>
     </form>
     <div id="adminNav">
+        <a href="<%= HomeUrl %>">Home</a>
         <a href="<%= AnimeUrl %>">Управление каталогом</a>
+        <a href="<%= GalleryUrl %>">Управление каталогом Gallery</a>
     </div>
 </body>
 </html>

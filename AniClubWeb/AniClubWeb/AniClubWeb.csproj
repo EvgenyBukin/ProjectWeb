@@ -103,6 +103,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\CSS\AdminPanel.css" />
+    <Content Include="Content\CSS\GalleryStyle.css" />
     <Content Include="Content\CSS\jquery.mCustomScrollbar.css" />
     <Content Include="Content\CSS\newsContent.css" />
     <Content Include="Content\Img\BD\News01Img1%281%29.png" />
@@ -149,6 +150,7 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Pages\Admin\AGallery.aspx" />
     <Content Include="Pages\Admin\Catalog.aspx" />
     <Content Include="Pages\AnimeNews.Master" />
     <Content Include="Pages\Admin\Admin.Master" />
@@ -167,6 +169,7 @@
     <Content Include="Pages\Login.aspx" />
     <Content Include="scripts\ai.0.15.0-build58334.js" />
     <Content Include="scripts\ai.0.15.0-build58334.min.js" />
+    <Content Include="scripts\GallerySc.js" />
     <Content Include="scripts\jquery.easing.1.3.js" />
     <Content Include="scripts\jquery.mCustomScrollbar.concat.min.js" />
     <Content Include="scripts\ModalAnimations.js" />
@@ -205,6 +208,13 @@
     </Compile>
     <Compile Include="Pages\Admin\Admin.Master.designer.cs">
       <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Admin\AGallery.aspx.cs">
+      <DependentUpon>AGallery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Admin\AGallery.aspx.designer.cs">
+      <DependentUpon>AGallery.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Admin\Catalog.aspx.cs">
       <DependentUpon>Catalog.aspx</DependentUpon>
@@ -251,6 +261,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Content\Img\Gallery\" />
     <Folder Include="Pages\Helpers\" />
   </ItemGroup>
   <PropertyGroup>

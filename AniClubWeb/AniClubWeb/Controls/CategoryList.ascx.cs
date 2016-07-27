@@ -46,5 +46,12 @@ namespace AniClubWeb.Controls
             string path = RouteTable.Routes.GetVirtualPath(null, null).VirtualPath;
             return string.Format("<a href='{0}'>Главная</a>", path);
         }
+
+        protected string CreatGalleryLinkHtml()
+        {
+            string path = RouteTable.Routes.GetVirtualPath(null, "GalleryGeneral",
+                null ).VirtualPath;
+            return string.Format("<a href='{0}'>Gallery</a>", path);
+        }
     }
 }

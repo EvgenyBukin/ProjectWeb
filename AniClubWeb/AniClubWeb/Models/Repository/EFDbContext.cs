@@ -9,6 +9,6 @@ namespace AniClubWeb.Models.Repository
     public class EFDbContext : DbContext
     {
         public DbSet<Anime> Animes { get; set; }
-        /*public DbSet<AnimeG> AnimeGs { get; set; }*/
+        public DbSet<AnimeG> AnimeGs { get; set; }
     }
 }

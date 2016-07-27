@@ -79,15 +79,58 @@
                     <input type="hidden" name="ProductID" value="0" />
                 </td>
                 <td><input name="Text" /></td>
-                <td><input name="Category" /></td>
-                <td><input name="Img1" /></td>
-                <td><input name="Img2" /></td>
-                <td><input name="Img3" /></td>
-                <td><input name="Img4" /></td>
-                <td><input name="Img5" /></td>
-                <td><input name="Img6" /></td>
-                <td><input name="Video" /></td>
-                <td><input name="Data" /></td>
+                <td>
+                    <input name="Category" list="CategoryOptions"/>
+                    <datalist id="CategoryOptions">
+                        <option value="Обзор">
+                        <option value="Аниме">
+                    </datalist>
+                </td>
+                <td>
+                    <input name="Img1" list="Img1Options" />
+                    <datalist id="Img1Options">
+                        <option value="/Content/Img/BD/News00Img1.png">
+                    </datalist>
+                </td>
+                <td>
+                    <input name="Img2" list="Img2Options" />
+                    <datalist id="Img2Options">
+                        <option value="/Content/Img/BD/News00Img2.gif">
+                    </datalist>
+                </td>
+                <td>
+                    <input name="Img3" list="Img3Options" />
+                    <datalist id="Img3Options">
+                        <option value="/Content/Img/BD/News00Img3.gif">
+                    </datalist>
+                </td>
+                <td>
+                    <input name="Img4" list="Img4Options" />
+                    <datalist id="Img4Options">
+                        <option value="/Content/Img/BD/News00WrapImg1.png">
+                    </datalist>
+                </td>
+                <td>
+                    <input name="Img5" list="Img5Options"/>
+                    <datalist id="Img5Options">
+                        <option value="/Content/Img/BD/News00WrapImg2.png">
+                    </datalist>
+                </td>
+                <td>
+                    <input name="Img6" list="Img6Options"/>
+                    <datalist id="Img6Options">
+                        <option value="/Content/Img/BD/News00WrapImg3.png">
+                    </datalist>
+                </td>
+                <td>
+                    <input name="Video" list="VideoOptions"/>
+                    <datalist id="VideoOptions">
+                        <option value="/Content/Video/News00Video01.mp4">
+                    </datalist>
+                </td>
+                <td>
+                    <input name="Data" />
+                </td>
             </tr>
         </InsertItemTemplate>
     </asp:ListView>

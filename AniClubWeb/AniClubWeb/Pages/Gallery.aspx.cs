@@ -8,10 +8,12 @@ namespace AniClubWeb.Pages
 {
     public partial class Gallery : System.Web.UI.Page
     {
-        /*
+        
         private Repository repository = new Repository();
-        private int pageSize = 4;
+        private int pageSize = 12;
+        public int countPage = 6;
 
+        //выясняет, присутствует ли значение page в запрошенном URL. 
         protected int CurrentPageGal
         {
             get
@@ -22,45 +24,37 @@ namespace AniClubWeb.Pages
             }
         }
 
+        //возвращающее наибольший номер допустимой страницы
         protected int MaxPage
         {
             get
             {
-                int prodCount = FilterAnimes().Count();
-                return (int)Math.Ceiling((decimal)prodCount / pageSize);
+                return (int)Math.Ceiling((decimal)repository.AnimeGs.Count() / pageSize);
             }
         }
 
+        //Проверка переменных маршрутизации с целью выяснения, захвачено ли значение page:
         private int GetPageFromRequest()
         {
             int page;
             string reqValue = (string)RouteData.Values["page"] ??
                 Request.QueryString["page"];
-            return reqValue != null && int.TryParse(reqValue, out page) ? page : MaxPage;
+            return reqValue != null && int.TryParse(reqValue, out page) ? page : 1;
         }
 
 
         public IEnumerable<AnimeG> GetAnimeGs()
         {
-            return FilterAnimes()
+            //return FilterAnimes()
+            return repository.AnimeGs
                 .OrderBy(g => g.AnId) //обеспечивает обработку объектов Anime в одном и том же порядке.
                 .Skip((CurrentPageGal - 1) * pageSize) //CurP and PagS позволяют выбирать требуемые объекты Anime из хранилища. 
                 .Take(pageSize); //позволяет выбрать нужное количество объектов Anime для отображения пользователю.
         }
 
-        //Метод для фильтрации по категориям.
-        private IEnumerable<AnimeG> FilterAnimes()
-        {
-            IEnumerable<AnimeG> AnimeGs = repository.AnimeGs;
-            string currentCategory = (string)RouteData.Values["hashtag"] ??
-                Request.QueryString["hashtag"];
-            return currentCategory == null ? AnimeGs :
-                AnimeGs.Where(p => p.Hashtag == currentCategory);
-        }
-
         protected void Page_Load(object sender, EventArgs e)
         {
 
-        }*/
+        }
     }
 }

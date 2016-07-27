@@ -23,6 +23,22 @@ namespace AniClubWeb.Pages.Admin
             }
         }
 
+        public string GalleryUrl
+        {
+            get
+            {
+                return generateURL("admin_gallery");
+            }
+        }
+
+        public string HomeUrl
+        {
+            get
+            {
+                return generateURL("");
+            }
+        }
+
         private string generateURL(string routeName)
         {
             return RouteTable.Routes.GetVirtualPath(null, routeName, null).VirtualPath;

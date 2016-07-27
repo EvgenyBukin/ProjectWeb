@@ -10,17 +10,36 @@ namespace AniClubWeb.Models.Repository
     public class Repository
     {
         private EFDbContext context = new EFDbContext();
-        /*
+        
         public IEnumerable<AnimeG> AnimeGs
         {
             get{ return context.AnimeGs; }
         }
-        */
+        
         public IEnumerable<Anime> Animes
         {
             get { return context.Animes; }
         }
         
+        public void SaveAnimeGalleryCatalog(AnimeG animeg)
+        {
+            if (animeg.AnId == 0)
+            {
+                animeg = context.AnimeGs.Add(animeg);
+            }
+            else
+            {
+                AnimeG dbAnimeG = context.AnimeGs.Find(animeg.AnId);
+                if (dbAnimeG != null)
+                {
+                    dbAnimeG.Hashtag = animeg.Hashtag;
+                    dbAnimeG.SGImg = animeg.SGImg;
+                    dbAnimeG.GName = animeg.GName;
+                }
+            }
+            context.SaveChanges();
+        }
+
         public void SaveAnimeCatalog(Anime anime)
         {
             if(anime.AnimeID == 0)
@@ -45,6 +64,12 @@ namespace AniClubWeb.Models.Repository
                     dbAnime.video = anime.video;
                 }
             }
+            context.SaveChanges();
+        }
+
+        public void DeleteAnimeGalleryCatalog(AnimeG animeg)
+        {
+            context.AnimeGs.Remove(animeg);
             context.SaveChanges();
         }
 

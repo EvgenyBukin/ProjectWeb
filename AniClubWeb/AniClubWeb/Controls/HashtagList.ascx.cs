@@ -16,24 +16,24 @@ namespace AniClubWeb.Controls
 
         /*=====================================GALLERY==========================================*/
         
-        /*protected IEnumerable<string> GetCategories() //применяет LINQ для генерации списка названий категорий.
+        protected IEnumerable<string> GetCategories() //применяет LINQ для генерации списка названий категорий.
         {
             return new Repository().AnimeGs
                 .Select(p => p.Hashtag)
                 .Distinct()
                 .OrderBy(x => x);
-        }*/
+        }
 
         /*=============================OVERALL=============================*/
-        /*protected string CreateHomeLinkHtml()
+        protected string CreateHomeLinkHtml()
         {
             string path = RouteTable.Routes.GetVirtualPath(null, null).VirtualPath;
             return string.Format("<a href='{0}'>Главная</a>", path);
-        }*/
+        }
 
         // Использует систему маршрутизации для генерирования URL, которые содержат
         // компонент категории, позволяя представлять неотфильтрованный список.
-       /* protected string CreateLinkHtml(string hashtag)
+        protected string CreateLinkHtml(string hashtag)
         {
             string selectedCategory = (string)Page.RouteData.Values["hashtag"] //!
                 ?? Request.QueryString["hashtag"];
@@ -44,6 +44,6 @@ namespace AniClubWeb.Controls
 
             return string.Format("<a href='{0}' {1}>{2}</a>",
             path, hashtag == selectedCategory ? "class='selected1'" : "", hashtag); //!
-        }*/
+        }
     }
 }

@@ -6,3 +6,5 @@
 <% foreach (string category in GetCategories()) {
        Response.Write(CreateLinkHtml(category));       
 }%><!-- Перечисление доступных категорий -->
+
+<%= CreatGalleryLinkHtml() %>

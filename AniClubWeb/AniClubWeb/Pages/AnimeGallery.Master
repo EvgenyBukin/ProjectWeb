@@ -4,17 +4,24 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <link rel='shortcut icon' href='/Content/Img/favicon.ico' type='image/x-icon' />
+    <link rel='stylesheet' type='text/css' href='/Content/CSS/GalleryStyle.css' />
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css' />
+    <link href='https://fonts.googleapis.com/css?family=Economica' rel='stylesheet' type='text/css' />
+    <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+    <script src='/scripts/GallerySc.js'></script>
+    <title>Gallery</title>
 </head>
 <body>
     <form id="form1" runat="server">
     <div>
-        <div id="header">
-            <div class="title">GameStore - магазин компьютерных игр</div>
-        </div>
-        <div id="categories">
+        <div class="example typography-example typography-example-1">
+		    <span>a</span><span>n</span><span>i</span><span>c</span><span>l</span><span>u</span><span>b</span> 
+		    <span>g</span><span>a</span><span>l</span><span>l</span><span>e</span><span>r</span><span>y</span>
+	    </div>
+        <div class="nav" id="categories">
                 <GS:GCategoryLinks runat="server" />
-            </div>
+        </div>
         <div>
             <asp:ContentPlaceHolder ID="bodyContent" runat="server" />
         </div>

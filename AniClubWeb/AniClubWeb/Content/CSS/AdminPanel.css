@@ -22,14 +22,18 @@ div#adminNav a
 {
     font: bold 1.1em "Arial Narrow","Franklin Gothic Medium",Arial; 
     display: inline-block;
-    color: black; padding: 6px; border: solid medium black;
-    text-decoration: none; width: 200px; text-align: center;
+    color: rgb(255, 255, 255);
+    padding: 6px;
+    border: solid 2px black;
+    text-decoration: none;
+    width: 225px;
+    text-align: center; 
 }
 
 div#adminNav a:hover
 {
     background: #888;
-    color: white;
+    color: rgb(255, 255, 255);
 }
 
 .adminContent

@@ -8,18 +8,20 @@ namespace AniClubWeb
     {
         public static void RegisterRoutes(RouteCollection routes)
         {
-            routes.MapPageRoute(null, "list/{category}/{page}", "~/Pages/Listing.aspx");
-            routes.MapPageRoute(null, "list/{page}", "~/Pages/Listing.aspx");
+            routes.MapPageRoute(null, "page/{category}/{page}", "~/Pages/Listing.aspx");
+            routes.MapPageRoute(null, "page/{page}", "~/Pages/Listing.aspx");
             routes.MapPageRoute(null, "", "~/Pages/Listing.aspx");
-            routes.MapPageRoute(null, "list", "~/Pages/Listing.aspx");
-            
-            routes.MapPageRoute(null, "list/{hashtag}/{page}", "~/Pages/Gallery.aspx");
-            routes.MapPageRoute(null, "list/{page}", "~/Pages/Gallery.aspx");
-            routes.MapPageRoute(null, "", "~/Pages/Gallery.aspx");
-            routes.MapPageRoute(null, "list", "~/Pages/Gallery.aspx");
-            
+            routes.MapPageRoute(null, "page", "~/Pages/Listing.aspx");
+
+            routes.MapPageRoute("GalleryPages", "gallery/page/{page}", "~/Pages/Gallery.aspx");
+            routes.MapPageRoute("GalleryGeneral", "gallery", "~/Pages/Gallery.aspx");
+            // routes.MapPageRoute(null, "gallery/page", "~/Pages/Gallery.aspx");
+
             //new code
             routes.MapPageRoute("admin_catalog", "admin/catalog", "~/Pages/Admin/Catalog.aspx");
+
+            //new code 25.07.16
+            routes.MapPageRoute("admin_gallery", "admin/gallery", "~/Pages/Admin/AGallery.aspx");
         }
     }
 }
