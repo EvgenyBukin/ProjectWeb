@@ -106,6 +106,7 @@
     <Content Include="Content\CSS\GalleryStyle.css" />
     <Content Include="Content\CSS\jquery.mCustomScrollbar.css" />
     <Content Include="Content\CSS\newsContent.css" />
+    <Content Include="Content\FontsStyle\Cuprum.woff" />
     <Content Include="Content\Img\BD\News01Img1%281%29.png" />
     <Content Include="Content\Img\BD\News01Img1.png" />
     <Content Include="Content\Img\BD\News01Img2.gif" />
@@ -155,6 +156,9 @@
     <Content Include="Pages\AnimeNews.Master" />
     <Content Include="Pages\Admin\Admin.Master" />
     <Content Include="Pages\AnimeGallery.Master" />
+    <Content Include="Content\FontsStyle\OpenSansCondensed.woff" />
+    <Content Include="Content\FontsStyle\Orbitron.woff" />
+    <Content Include="Content\FontsStyle\Economica.woff" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -167,6 +171,7 @@
     <Content Include="Pages\Gallery.aspx" />
     <Content Include="Pages\Listing.aspx" />
     <Content Include="Pages\Login.aspx" />
+    <Content Include="scripts\AdminPanel.js" />
     <Content Include="scripts\ai.0.15.0-build58334.js" />
     <Content Include="scripts\ai.0.15.0-build58334.min.js" />
     <Content Include="scripts\GallerySc.js" />

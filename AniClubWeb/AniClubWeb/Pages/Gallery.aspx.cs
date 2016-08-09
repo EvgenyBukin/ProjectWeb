@@ -11,7 +11,7 @@ namespace AniClubWeb.Pages
         
         private Repository repository = new Repository();
         private int pageSize = 12;
-        public int countPage = 6;
+        public int lastChange = 4;
 
         //выясняет, присутствует ли значение page в запрошенном URL. 
         protected int CurrentPageGal
@@ -24,12 +24,21 @@ namespace AniClubWeb.Pages
             }
         }
 
-        //возвращающее наибольший номер допустимой страницы
+        //возвращает наибольший номер допустимой страницы
         protected int MaxPage
         {
             get
             {
                 return (int)Math.Ceiling((decimal)repository.AnimeGs.Count() / pageSize);
+            }
+        }
+
+        //возвращает количество объектов
+        protected int MaxImg
+        {
+            get
+            {
+                return (int)Math.Ceiling((decimal)repository.AnimeGs.Count());
             }
         }
 
@@ -45,11 +54,18 @@ namespace AniClubWeb.Pages
 
         public IEnumerable<AnimeG> GetAnimeGs()
         {
-            //return FilterAnimes()
             return repository.AnimeGs
                 .OrderBy(g => g.AnId) //обеспечивает обработку объектов Anime в одном и том же порядке.
                 .Skip((CurrentPageGal - 1) * pageSize) //CurP and PagS позволяют выбирать требуемые объекты Anime из хранилища. 
                 .Take(pageSize); //позволяет выбрать нужное количество объектов Anime для отображения пользователю.
+        }
+
+        public IEnumerable<AnimeG> GetAnimeGsLC()
+        {
+            return repository.AnimeGs
+                .OrderBy(g => g.AnId) //обеспечивает обработку объектов Anime в одном и том же порядке.
+                .Skip(MaxImg - 4) // выборка (4 последних)
+                .Take(lastChange); //позволяет выбрать нужное количество объектов Anime для отображения пользователю.
         }
 
         protected void Page_Load(object sender, EventArgs e)

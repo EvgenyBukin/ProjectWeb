@@ -18,7 +18,31 @@
             $(this).css({ 'width': 'auto' , 'height': '100%'});
         };
 
-        $(this).css({ 'position': 'initial', 'top': 0 });
+        $(this).css({ 'position': 'relative', 'top': 0 });
+    });
+});
+
+$(document).ready(function () {
+    // берем все необходимые нам картинки
+    var $img = $('.gImgLC');
+
+    // ждем загрузки картинки браузером
+    $img.load(function () {
+        // удаляем атрибуты width и height
+        $(this).removeAttr("width")
+               .removeAttr("height")
+               .css({ width: "", height: "" });
+
+        // получаем заветные цифры
+        var width = $(this).width();
+        var height = $(this).height();
+
+
+        if (height >= width) {
+            $(this).css({ 'width': 'auto', 'height': '100%' });
+        };
+
+        $(this).css({ 'position': 'relative', 'top': 0 });
     });
 });
 

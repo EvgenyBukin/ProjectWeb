@@ -5,22 +5,26 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AdminPanel</title>
+    <link rel='shortcut icon' href='/Content/Img/favicon.ico' type='image/x-icon' />
     <link rel='stylesheet' type='text/css' href='/Content/CSS/AdminPanel.css' />
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css' />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src='/scripts/AdminPanel.js'></script>
 </head>
 <body>
-    <form id="form1" runat="server">
-    <h1>AniClubWeb - AdminPanel</h1>
-    <div class="adminContent">
-        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-        
-        </asp:ContentPlaceHolder>
-    </div>
-    </form>
-    <div id="adminNav">
+     <div id="adminNav">
         <a href="<%= HomeUrl %>">Home</a>
         <a href="<%= AnimeUrl %>">Управление каталогом</a>
         <a href="<%= GalleryUrl %>">Управление каталогом Gallery</a>
     </div>
+    <form id="form1" runat="server">
+    <h1 class="headerTxt">AniClubWeb - AdminPanel</h1>
+    <div class="adminContent">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server" />
+    </div>
+    </form>
 </body>
 </html>

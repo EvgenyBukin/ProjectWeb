@@ -28,7 +28,7 @@ namespace AniClubWeb.Controls
         protected string CreateHomeLinkHtml()
         {
             string path = RouteTable.Routes.GetVirtualPath(null, null).VirtualPath;
-            return string.Format("<a href='{0}'>Главная</a>", path);
+            return string.Format("<a href='{0}'></a>", path);
         }
 
         // Использует систему маршрутизации для генерирования URL, которые содержат

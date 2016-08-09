@@ -8,10 +8,11 @@
     <title>AniClubNews</title>
     <link rel='shortcut icon' href='/Content/Img/favicon.ico' type='image/x-icon' />
     <link rel='stylesheet' type='text/css' href='/Content/CSS/newsContent.css' />
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css' />
-    <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css' />
-    <link href='https://fonts.googleapis.com/css?family=Cuprum' rel='stylesheet' type='text/css' />
-    <link href='https://fonts.googleapis.com/css?family=Economica' rel='stylesheet' type='text/css' />
+    <!--<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css' />-->
+    <!--<link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css' />-->
+    <!--<link href='https://fonts.googleapis.com/css?family=Cuprum' rel='stylesheet' type='text/css' />-->
+    <!--<link href='https://fonts.googleapis.com/css?family=Economica' rel='stylesheet' type='text/css' />-->
+    <!--<link href='https://fonts.googleapis.com/css?family=Cuprum&subset=latin,latin-ext,cyrillic' rel='stylesheet' type='text/css' />-->
     
     <link rel='stylesheet' href='/Content/CSS/jquery.mCustomScrollbar.css' />
     <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
@@ -30,10 +31,18 @@
             <nav>
 				<div class="main-nav">
 					<div id="categories">
+                        <div class="catDecoration"></div>
                         <GS:CategoryLinks runat="server" />
 					</div>
+                    <div class="logIn">
+                        <input id="name" type="text" placeholder="Name" class="checked" />
+                        <input id="password" type="password" placeholder="Password" class="checked" />
+                        <input type="submit" value="SUBMIT" class="check-button" />
+                    </div>
 				</div>
 			</nav>
+            <div class="navDecorationTrapeze"></div>
+            <div class="navDecorationShadow"></div>
             <main role="main" class="newsModuleContent">
                 <section>
                     <div>

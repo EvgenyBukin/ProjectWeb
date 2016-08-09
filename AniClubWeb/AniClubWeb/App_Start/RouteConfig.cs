@@ -15,10 +15,9 @@ namespace AniClubWeb
 
             routes.MapPageRoute("GalleryPages", "gallery/page/{page}", "~/Pages/Gallery.aspx");
             routes.MapPageRoute("GalleryGeneral", "gallery", "~/Pages/Gallery.aspx");
-            // routes.MapPageRoute(null, "gallery/page", "~/Pages/Gallery.aspx");
 
-            //new code
             routes.MapPageRoute("admin_catalog", "admin/catalog", "~/Pages/Admin/Catalog.aspx");
+            routes.MapPageRoute("login", "login", "~/Pages/Login.aspx");
 
             //new code 25.07.16
             routes.MapPageRoute("admin_gallery", "admin/gallery", "~/Pages/Admin/AGallery.aspx");

@@ -4,11 +4,26 @@
     margin: 0;
 }
 
+#form1
+{
+    margin-left: auto;
+    margin-right: auto;
+    width: 1278px;
+    height: 894px;
+}
+
 div#content
 { 
+    float: right;
+    /*display:inline-block;*/
     border-left: 2px solid rgb(128, 128, 128);
-    margin-left: 9em; 
-    padding: 1em; 
+    /*margin-left: 0.1em;*/
+    padding: 13px; 
+}
+
+.specialGB
+{
+    width: 1075px;
 }
 
 label.item
@@ -39,8 +54,8 @@ div.pager
 { 
     text-align:right; 
     border-top: 2px solid rgb(128, 128, 128);
-    padding: 0.7em 0 0.7em 0;
-    margin-top: 1em;
+    padding: 11px 0 11px 0;
+    margin-top: .8em;
     background: rgb(20, 20, 20);
     border-bottom: 2px rgb(128, 128, 128) solid;
     text-align: center;
@@ -84,6 +99,7 @@ div.galleryImg
 
 .gImg
 {
+    pointer-events: none;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -102,6 +118,7 @@ div.galleryImg
     margin-top: 5px;
     color: rgb(255, 255, 255);
     font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 16px;
 }
 
 .galleryInfImg span
@@ -109,37 +126,16 @@ div.galleryImg
     display: inline-table;
 }
 
-.nav a
+.nav
 {
-    float: left;
-    color: #fff;
-    padding: 10px 40px;
-    text-decoration: none;
-    background: radial-gradient(rgba(55, 55, 55, 1), rgb(0, 0, 0));
-    box-shadow: 4px 4px 10px -4px rgb(28, 28, 28);
-    border-radius: 3px 3px 3px 3px;
-    border-top: 1px solid rgba(18, 18, 18, 0.8);
-    border-bottom: 1px solid rgba(18, 18, 18, 0.8);
-    border-left: 1px solid rgba(37, 37, 37, 0.8);
-    border-right: 1px solid rgba(55, 55, 55, 0.8);
-    font-family: 'Economica', sans-serif;
-}
-
-.nav a:hover
-{
-	color: #fff;
-	background: radial-gradient(rgba(178, 0, 0, 1), rgb(0, 0, 0));
-    box-shadow: 4px 4px 10px -4px rgb(28, 28, 28);
-    border-radius: 3px 3px 3px 3px;
-    border-top: 1px solid rgba(18, 18, 18, 0.8);
-    border-bottom: 1px solid rgba(20, 0, 0, 0.8);
-    border-left: 1px solid rgba(39, 0, 0, 0.8);
-    border-right: 1px solid rgba(55, 55, 55, 0.8);
+    display: inline-block;
+    width: 166px;
+    height: 732px;
 }
 
 div.pager a
 {
-    font-size: 1.1em;
+    font-size: 18px;
     color: #666;
     text-decoration: none;
     padding: 10px 20px 10px 20px;
@@ -162,6 +158,20 @@ div.pager a:hover
     border-right: 1px solid rgba(55, 55, 55, 0.8);
 }
 
+@font-face {
+  font-family: 'Open Sans Condensed';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Open Sans Cond Light'), local('OpenSans-CondensedLight'), url(/Content/FontsStyle/OpenSansCondensed.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Economica';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Economica'), local('Economica-Regular'), url(/Content/FontsStyle/Economica.woff) format('woff');
+}
+
 /*===============================================*/
 
 /* Стили модального окна */
@@ -179,7 +189,7 @@ div.pager a:hover
 
 .modal .btn-close:hover
 {
-    color: red;
+    color: rgb(207, 83, 0);
 }
 
 /* слой затемнения */
@@ -269,6 +279,16 @@ div.pager a:hover
     border-bottom: #eaeaea solid 1px;
 }
 
+.modal-header span
+{
+    color: rgb(255, 255, 255);
+    right: 26px;
+    top: 7px;
+    position: absolute;
+    pointer-events: none;
+    font-size: 16px;
+}
+
 .modal-footer
 {
     border-top: #eaeaea solid 1px;
@@ -284,6 +304,7 @@ div.pager a:hover
     vertical-align: top;
     color: rgb(255, 255, 255);
     font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 18px;
 }
 
 .maxSizeImg
@@ -370,7 +391,7 @@ div.pager a:hover
 .typography-example-1
 {
     border-bottom: 2px rgb(128, 128, 128) solid;
-	background-image: linear-gradient(135deg, #1a1a1a, #254169);
+	background-image: linear-gradient(135deg, rgb(26, 26, 26), rgb(102, 102, 102));
 	color: #fff;
 	padding: 1em 0;
 	text-align: center;
@@ -379,7 +400,8 @@ div.pager a:hover
 	letter-spacing: .4em;
 	padding-left: .4em;
     margin-bottom: 8px;
-	font-size: 1.8em;
+	font-size: 28px;
+    cursor: default;
 }
 
 .typography-example-1 span
@@ -435,7 +457,81 @@ div.pager a:hover
 	transition-delay:   100ms 
 }
 
-.typography-example-1:hover span
+body:hover .typography-example-1 span
 {
 	opacity: 1
+}
+
+.LastChange
+{
+    cursor: pointer;
+    width: 138px;
+    height: 130px;
+    margin-left: 11px;
+    margin-top: .5em;
+    margin-bottom: .5em;
+    border-bottom: 1px dotted rgba(37, 37, 37, 0.8);
+    padding-bottom: 8px;
+}
+
+.LastChange:hover img
+{
+    padding-bottom: 5px; 
+    transition: .3s;
+    border-bottom: 1px rgb(144, 0, 0) solid;
+}
+
+.LastChange img
+{
+    pointer-events: none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.LastChangePanel
+{
+    height: 669px;
+    margin-left: 4px;
+    background-image: url(/Content/Img/LastChangePanel.png);
+    background-size: 161px 669px;
+}
+
+.specialTxt
+{
+    padding-top: 37px;
+    display: block;
+    margin-top: .6em;
+    margin-left: .6em;
+    margin-bottom: 1.1em;
+    color: rgb(26, 26, 26);
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: default;
+}
+
+.pagerG
+{
+    margin-left: 1em;
+    margin-top: 1.2em;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    z-index: 100;
+}
+
+.pagerG a
+{
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-image: url(/Content/Img/Home.png);
+    background-size: 100px 50px;
+}
+
+.pagerG a:hover
+{
+    background-position: 50px 0;
 }

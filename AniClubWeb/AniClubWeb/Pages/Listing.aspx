@@ -24,7 +24,7 @@
                                  <span class='Category'>Категория: {10}</span>
                                 <div class='module_Button1'>
                                     <label class='btn' for='modal-1{5}'></label>
-                                    <sapn class='module_Button1_Txt'>Подробние</span>
+                                    <sapn class='module_Button1_Txt' id='setav'>Подробние</span>
                                 </div>                              
                             </div>
                             <div class='modal'>
@@ -76,8 +76,24 @@
        </article>
        <div class="pager">
             <%
+                int maxButtonCount = 6;
+                int changedButtonCount = 4;
+
                 for(int i = 1; i <= MaxPage; i++)
                 {
+                    if (i > 1 && i < MaxPage && MaxPage > maxButtonCount)
+                    {
+                        if (CurrentPage >= changedButtonCount && i < CurrentPage - ((MaxPage - CurrentPage < changedButtonCount) ? changedButtonCount - (MaxPage - CurrentPage ) : 1))
+                        {
+                            continue;
+                        }
+
+                        if (MaxPage - CurrentPage >= changedButtonCount && i > CurrentPage + ((CurrentPage < changedButtonCount - 1) ? changedButtonCount - CurrentPage + 1: 2))
+                        {
+                            continue;
+                        }
+                    }
+
                     string category = (string)Page.RouteData.Values["category"]
                         ?? Request.QueryString["category"];
 
@@ -89,7 +105,7 @@
 
                     Response.Write(
                         String.Format("<a href='{0}' {1}>{2}</a>",
-                        path, i == CurrentPage ? "class='selected1'" : "", i));
+                        path, i == CurrentPage ? "class='selected'" : "", i));
                 }
             %>
        </div>

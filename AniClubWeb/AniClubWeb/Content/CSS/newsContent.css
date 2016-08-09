@@ -3,12 +3,7 @@ body
 	width: 1263px;
 	margin: 0;
 	padding: 0;
-	/*background-image: url(/Content/Img/fon1_3.png);*/
     background: rgb(0, 0, 0);
-	/*background-size: 100% 100%;
-	background-repeat: no-repeat;
-	background-position: center;
-	background-attachment: fixed;*/
     margin-left: auto;
     margin-right: auto;
 }
@@ -66,28 +61,27 @@ NEWS CONTENT
 
 .dateTime
 {
-    float: left;
+    left: 0;
     color: white;
     font-family: 'Open Sans Condensed', sans-serif;
     font-size: 15px;
     position: absolute;
     top: 0;
     margin-top: 345px;
-    margin-left: 10px;
-    text-shadow: 2px 2px 1px rgb(178, 0, 0);
+    margin-left: -200px;
+    transition: all .4s ease-in-out;
 }
 
 .Category
 {
-    float: left;
+    left: -195px;
     color: white;
     font-family: 'Open Sans Condensed', sans-serif;
     font-size: 15px;
     position: absolute;
     top: 0;
     margin-top: 345px;
-    margin-left: 210px;
-    text-shadow: 2px 2px 1px rgb(178, 0, 0);
+    transition: all .4s ease-in-out;
 }
 
 .newsContent_Window_Title .nameNews
@@ -169,8 +163,8 @@ NEWS CONTENT
     padding-right: 15px;
     display: block;
     color: white;
-    /*font-family: Verdana, Arial, Helvetica, sans-serif;*/
     font-family: 'Cuprum', sans-serif;
+    font-size: 16px;
 }
 
 .newsContent_TitleModule
@@ -210,12 +204,13 @@ NEWS CONTENT
     width: 90px;
     height: 30px;
     margin-top: -45px;
-    margin-right: 29px;
+    margin-right: -150px;
     float: right;
     background: linear-gradient(rgb(110,112,120), rgb(81,81,86)) rgb(110,112,120);
     transform: matrix(1, 0, -0.5, 1, -7, 0);
     border: 1px solid rgb(0, 0, 0);
     display: inline-block;
+    transition: all .4s ease-in-out;
 }
 
 .btn:hover
@@ -237,14 +232,24 @@ NEWS CONTENT
 .module_Button1_Txt
 {
     text-shadow: 0 -1px 2px rgba(0,0,0,.2);
-    display: inline-block;
+    display: block;
     position: absolute;
     margin-top: -40px;
-    margin-left: 538px;
-    font-weight: 800;
+    margin-left: 710px;
     color: rgb(209,209,217);
     pointer-events: none;
-    font-family: 'Open Sans Condensed', sans-serif;
+    font-family: Arial;
+    font-stretch: condensed;
+    font-size: 16px;
+    transition: all .4s ease-in-out;
+}
+
+.subsidiaryModuleTxt
+{
+    position: absolute;
+    width: 100px;
+    height: 25px;
+    margin-top: -40px;
 }
 
 #modal-body video
@@ -262,7 +267,6 @@ NEWS CONTENT
     margin-right: 5px;
     overflow: hidden;
     pointer-events: none;
-    /*border-bottom: 1px solid rgb(160, 0, 0);*/
 }
 
 .newsContent_Tile_block2_Wrap
@@ -278,6 +282,34 @@ NEWS CONTENT
     pointer-events: none;
 }
 
+@font-face {
+  font-family: 'Cuprum';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Cuprum'), local('Cuprum-Regular'), url(/Content/FontsStyle/Cuprum.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Open Sans Condensed';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Open Sans Cond Light'), local('OpenSans-CondensedLight'), url(/Content/FontsStyle/OpenSansCondensed.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Orbitron';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Orbitron-Light'), local('Orbitron-Regular'), url(/Content/FontsStyle/Orbitron.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Economica';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Economica'), local('Economica-Regular'), url(/Content/FontsStyle/Economica.woff) format('woff');
+}
+
 
 /*
 ======================
@@ -288,26 +320,25 @@ NEWS HEADER
 .logWebsite
 {
 	float: left;
-	margin-left: 100px;
+	margin-left: 50px;
 	background: url(/Content/Img/logWebsite.png) no-repeat;
-	background-size: 270px 270px;
-	width: 270px;
-	height: 270px;
+	background-size: 200px 200px;
+	width: 200px;
+	height: 200px;
 }
 
 .logWebsite1
 {
     background-image: url(/Content/Img/Log_Kishiyo-Anime.png);
-    background-size: 1280px 272px;
+    background-size: 1260px 200px;
     width: 1263px;
-    height: 272px;
+    height: 200px;
 }
 
 .newsHeader
 {
-	height: 272px;
+	height: 200px;
 	background: rgb(0, 0, 0);
-	background-size: 1280px 272px;
 }
 
 /*
@@ -316,17 +347,20 @@ NEWS NAV
 ======================
 */
 
+nav
+{
+    width: 100%;
+    height: 55px;
+    background: rgb(26, 26, 26);
+     border-top: 1px solid rgb(102, 102, 102);
+}
+
 .main-nav
 {
     display: inline-block;
-	line-height: 25px;
-	margin-left: 1px;
-}
-
-.main-nav div
-{
-	display: inline-block;
-	cursor: default;
+	line-height: 55px;
+    width: 100%;
+    height: 90px;
 }
 
 .main-nav a
@@ -336,26 +370,36 @@ NEWS NAV
     color: #fff;
     padding: 10px 40px;
     text-decoration: none;
-    background: radial-gradient(rgba(55, 55, 55, 1), rgb(0, 0, 0));
-    box-shadow: 4px 4px 10px -4px rgb(28, 28, 28);
-    border-radius: 3px 3px 3px 3px;
-    border-top: 1px solid rgba(18, 18, 18, 0.8);
-    border-bottom: 1px solid rgba(18, 18, 18, 0.8);
-    border-left: 1px solid rgba(37, 37, 37, 0.8);
-    border-right: 1px solid rgba(55, 55, 55, 0.8);
+    border-bottom: 2px solid rgb(102, 102, 102);
     font-family: 'Economica', sans-serif;
+    font-size: 16px;
 }
 
 .main-nav a:hover
 {
-	color: #fff;
-	background: radial-gradient(rgba(178, 0, 0, 1), rgb(0, 0, 0));
-    box-shadow: 4px 4px 10px -4px rgb(28, 28, 28);
-    border-radius: 3px 3px 3px 3px;
-    border-top: 1px solid rgba(18, 18, 18, 0.8);
-    border-bottom: 1px solid rgba(20, 0, 0, 0.8);
-    border-left: 1px solid rgba(39, 0, 0, 0.8);
-    border-right: 1px solid rgba(55, 55, 55, 0.8);
+    transition: .5s;
+    border-bottom: 2px solid rgb(135, 0, 0);
+}
+
+.navDecorationTrapeze
+{
+    float: right;
+    width: 415px;
+    height: 0;
+    border-top: 37px solid rgb(26, 26, 26);
+    border-left: 120px solid transparent;
+}
+
+.navDecorationShadow
+{
+    border: 1px solid rgb(102, 102, 102);
+    margin-left: 736px;
+    width: 50px;
+    height: 30px;
+    background: rgb(102, 102, 102);
+    transform: matrix(1, 0, 3.3, 1, -7, 5);
+    box-shadow: -65px -5px .1px -5px rgb(135, 0, 0),
+                -123px -10px .1px -9px rgb(26, 26, 26);
 }
 
 .selected
@@ -369,13 +413,30 @@ NEWS NAV
 
 .selected1
 {
-    background: radial-gradient(rgba(178, 0, 0, 1), rgb(0, 0, 0)) !important;
-    border-top: 1px solid rgba(18, 18, 18, 0.8) !important;
-    border-bottom: 1px solid rgba(20, 0, 0, 0.8) !important;
-    border-left: 1px solid rgba(39, 0, 0, 0.8) !important;
-    border-right: 1px solid rgba(55, 55, 55, 0.8) !important;
+    transition: .5s;
+    border-bottom: 2px solid rgb(135, 0, 0) !important;
 }
 
+#categories
+{
+    margin-left: 10px;
+}
+
+#categories a:nth-child(3)
+{
+    margin-right: 4px;
+}
+
+.catDecoration
+{
+    position: absolute;
+    width: 0px;
+    height: 2px;
+    background: rgb(135, 0, 0);
+    margin-top: 6px;
+    overflow: hidden;
+    transition: all .8s ease-in-out;
+}
 /*
 ======================
 NEWS FOOTER
@@ -481,15 +542,16 @@ div.pager
     position: fixed;
     top: 0;
     margin-top: 480px;
-    margin-left: -51px;
+    margin-left: -58px;
 }
 
 div.pager a
-{ 
+{
+    width: 16px;
     font-size: 1.1em; 
     color: #666; 
     text-decoration: none;
-    padding: 10px 20px 10px 20px;
+    padding: 15px 20px 15px 20px;
     text-align: center;
     display: block;
     background: radial-gradient(rgba(55, 55, 55, 1), rgb(0, 0, 0));
@@ -744,3 +806,69 @@ br
     height: 2px;
 }
 
+.logIn
+{
+    width: 410px;
+    height: 55px;
+    float: right;
+    margin-top: -40px;
+    margin-right: 15px;
+    background: rgb(0, 0, 0);
+    border-radius: 30px;
+    border: 1px solid rgb(102, 102, 102);
+}
+
+.logIn input:nth-child(1)
+{
+    margin-left: 8px;
+}
+
+#name
+{
+    border: 2px solid rgb(42, 42, 42);
+    border-radius: 25px;
+    color: rgb(255, 255, 255);
+    padding-left: 5px;
+    outline: none;
+    cursor: pointer;
+    width: 150px;
+    background: rgb(26, 26, 26);
+}
+
+#name:focus
+{
+    border: 2px solid rgb(207, 83, 0);
+}
+
+#password
+{
+    border: 2px solid rgb(42, 42, 42);
+    border-radius: 25px;
+    color: rgb(255, 255, 255);
+    padding-left: 5px;
+    outline: none;
+    cursor: pointer;
+    width: 150px;
+    background: rgb(26, 26, 26);
+}
+
+#password:focus
+{
+    border: 2px solid rgb(207, 83, 0);
+}
+
+.check-button
+{
+    border: 2px solid rgb(42, 42, 42);
+    border-radius: 25px;
+    color: rgb(169, 169, 169);
+    padding-left: 5px;
+    outline: none;
+    cursor: pointer;
+    background: rgb(26, 26, 26);
+}
+
+.check-button:hover
+{
+    border: 2px solid rgb(207, 83, 0);
+}

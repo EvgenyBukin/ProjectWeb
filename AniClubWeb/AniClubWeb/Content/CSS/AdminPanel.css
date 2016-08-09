@@ -1,8 +1,18 @@
 ﻿body
 {
     font-family: "Arial";
-    background: rgb(51, 51 , 51);
+    background: rgb(26, 26 , 26);
     color: rgb(255, 255, 255);
+    margin: 0;
+}
+
+.headerTxt
+{
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 1.5em;
+    margin-left: 1em;
+    cursor: default;
+    margin-bottom: 50px;
 }
 
 h1.title
@@ -13,33 +23,35 @@ h1.title
     text-align: center;
 }
 
+td
+{
+    cursor: default;
+}
+
 div#adminNav
 {
+    position: absolute;
+    width: 100%;
     text-align: center;
 }
 
 div#adminNav a
 {
-    font: bold 1.1em "Arial Narrow","Franklin Gothic Medium",Arial; 
+    background: rgb(42, 42, 42);
     display: inline-block;
     color: rgb(255, 255, 255);
+    font-family: 'Open Sans Condensed', sans-serif;
     padding: 6px;
-    border: solid 2px black;
+    border: solid 2px rgb(42, 42, 42);
     text-decoration: none;
     width: 225px;
-    text-align: center; 
+    text-align: center;
+    border-radius: 25px 25px;
 }
 
 div#adminNav a:hover
 {
-    background: #888;
-    color: rgb(255, 255, 255);
-}
-
-.adminContent
-{
-    margin: 20px 0;
-    padding: 5px;
+    border: solid 2px rgb(207, 83, 0);
 }
 
 #ordersCheck
@@ -58,8 +70,8 @@ table
 {
     display: inline-block;
     text-align: left;
-    margin: 20px 20px;
-    border: solid 1px;
+    margin: 0px 20px;
+    border: 2px solid rgb(128, 128, 128);
     border-collapse: collapse;
 }
 
@@ -92,10 +104,35 @@ table th, table td
     width: 210px;
 }
 
+#productsTable input
+{
+    border: 2px solid rgb(42, 42, 42);
+    border-radius: 25px;
+    background: rgb(42, 42, 42);
+    color: rgb(255, 255, 255);
+    outline:none;
+    cursor: pointer;
+}
+
+#productsTable input:focus
+{
+    border: 2px solid rgb(207, 83, 0);
+}
+
 #productsTable input[type=submit]
 {
+    border: 2px solid rgb(42, 42, 42);
+    border-radius: 25px;
+    background: rgb(42, 42, 42);
+    color: rgb(255, 255, 255);
     width: 100px;
     padding: 8px;
+    outline:none;
+}
+
+#productsTable input[type=submit]:hover
+{
+    border: 2px solid rgb(207, 83, 0);
 }
 
 .loginContainer
@@ -137,4 +174,461 @@ table th, table td
 input
 {
     width: 250px;
+}
+
+#adminNav
+{
+    border-bottom: 1px dotted rgb(128, 128, 128);
+    padding-bottom: 10px;
+    margin-bottom: 1em;
+}
+
+.categoryStyle
+{
+    width: 80px;
+}
+
+.anchorLeft
+{
+    float: left;
+}
+
+.anchorRight
+{
+    float: right;
+}
+
+/*
+====================
+LOG IN
+====================
+*/
+
+.adminContent
+{
+  margin: auto;
+  box-sizing: border-box;
+  display: block;
+}
+
+.wrapper
+{
+  display: block;
+  position: relative;
+  background-color: rgb(26, 26, 26);
+}
+
+.wrapper .nice-form
+{
+  width: 300px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.nice-form input
+{
+    box-sizing: border-box;
+}
+
+.nice-form label
+{
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.wrapper .nice-form input[type="text"], .wrapper .nice-form input[type="password"]
+{
+  width: 100%;
+  height: 45px;
+  border: 0;
+  outline: 0;
+  padding: 10px;
+  margin-top: 12px;
+  color: #eeeeee;
+  background-color: #303841;
+  transition: box-shadow 0.3s ease-out;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  z-index: 2;
+}
+
+.wrapper .nice-form input[type="text"]:focus, .wrapper .nice-form input[type="text"]:hover, .wrapper .nice-form input[type="password"]:focus, .wrapper .nice-form input[type="password"]:hover
+{
+  box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.4);
+}
+
+.wrapper .nice-form label
+{
+  color: rgb(255, 255, 255);
+  font-size: 36px;
+  font-weight: 100;
+  margin-bottom: 28px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.wrapper .nice-form input[type="submit"]
+{
+  color: white;
+  border: 0;
+  outline: 0;
+  width: 100%;
+  height: 35px;
+  margin-top: 12px;
+  background-color: rgb(207, 83, 0);
+  box-shadow: 0px 2px 14px rgba(215, 35, 35, 0.1);
+  padding: 10px;
+  position: relative;
+  z-index: 1;
+  transform: translateY(-47px);
+  transition: background-color 0.1s ease-out, box-shadow 0.3s linear, transform 0.3s cubic-bezier(0, 1.65, 1, 1), opacity 0.3s linear;
+}
+
+.wrapper .nice-form input[type="submit"]:hover
+{
+  background-color: rgb(255, 102, 0);
+  box-shadow: 0px 2px 14px rgba(215, 35, 35, 0.5);
+}
+
+.wrapper .nice-form input[type="submit"].available
+{
+  transform: translateY(0px);
+  opacity: 1;
+}
+/*=========================================================================*/
+
+.wrapBattonPanel
+{   
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid rgb(128, 128, 128);
+    padding-bottom: 10px;
+}
+
+.wrapBatton
+{
+    display: inline-block;
+    width: 100px;
+    height: 30px;
+    background: rgb(42, 42, 42);
+    border-radius: 25px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    border: 2px solid rgb(42, 42, 42);
+    line-height: 30px;
+    padding-left: 6px;
+}
+
+.wrapBatton span
+{
+    pointer-events: none;
+}
+
+.wrapBatton:nth-child(1)
+{
+    margin-left: 10px;
+}
+
+.wrapBatton:hover
+{
+    border: 2px solid rgb(207, 83, 0);
+}
+
+.tableBody
+{
+    white-space: nowrap
+}
+
+.tableHeader
+{
+    white-space: nowrap
+}
+
+/*=========================================================================*/
+
+.wrapBattonModule
+{
+    width: 100px;
+    height: 30px;
+    display: block;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+
+.show
+{
+
+    margin-top: 24px;
+    border-radius: 25px;
+    background: rgb(207, 83, 0);
+    color: rgb(0, 0, 0);
+    padding: 0px 4px;
+    font-size: 18px;
+    display: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+
+.hide
+{
+    display: inline;
+    margin-top: 24px;
+    border-radius: 25px;
+    background: rgb(207, 83, 0);
+    color: rgb(0, 0, 0);
+    padding: 0px 4px;
+    font-size: 18px;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+
+div.outerContainer1
+{
+    display: inline-table;
+    width: 100%;
+    margin-bottom: 40px;
+    border: 1px solid rgb(128, 128, 128);
+    padding-top: 4px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.tableHeader
+{
+    text-align: left;
+    height: 25px;
+}
+
+.tableHeader div
+{
+    display: inline-block;
+    text-align: left;
+    width: 100px;
+    padding: 0px 10px;
+    white-space: nowrap;
+    border: 1px dotted rgb(0, 0, 0);
+
+}
+
+.tableHeader div:nth-child(1)
+{
+    width: 205px;
+}
+
+.tableHeader div:nth-child(2)
+{
+    width: 530px;
+}
+
+.tableHeader div:nth-child(3)
+{
+    width: 400px;
+}
+
+.tableHeader div:nth-child(4)
+{
+    width: 75px;
+}
+
+.tableHeader div:nth-child(5)
+{
+    width: 275px;
+}
+
+.tableHeader div:nth-child(6)
+{
+    width: 275px;
+}
+
+.tableHeader div:nth-child(7)
+{
+    width: 275px;
+}
+
+.tableHeader div:nth-child(8)
+{
+    width: 290px;
+}
+
+.tableHeader div:nth-child(9)
+{
+    width: 290px;
+}
+
+.tableHeader div:nth-child(10)
+{
+    width: 290px;
+}
+
+.tableHeader div:nth-child(11)
+{
+    width: 275px;
+}
+
+.tableHeader div:nth-child(12)
+{
+    width: 147px;
+}
+
+/*===========================*/
+
+.tableBody
+{
+    text-align: left;
+}
+
+.tableBody span
+{
+    vertical-align: text-top;
+}
+
+.tableBody div
+{
+    display: inline-block;
+    text-align: left;
+    width: 100px;
+    height: 45px;
+    line-height: 28px;
+    padding: 0px 10px;
+    white-space: nowrap;
+    border: 1px dotted rgb(0, 0, 0);
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.tableBody div:nth-child(1)
+{
+    width: 205px;
+}
+
+.tableBody div:nth-child(2)
+{
+    width: 530px;
+}
+
+.tableBody div:nth-child(3)
+{
+    width: 400px;
+}
+
+.tableBody div:nth-child(4)
+{
+    width: 75px;
+}
+
+.tableBody div:nth-child(5)
+{
+    width: 275px;
+}
+
+.tableBody div:nth-child(6)
+{
+    width: 275px;
+}
+
+.tableBody div:nth-child(7)
+{
+    width: 275px;
+}
+
+.tableBody div:nth-child(8)
+{
+    width: 290px;
+}
+
+.tableBody div:nth-child(9)
+{
+    width: 290px;
+}
+
+.tableBody div:nth-child(10)
+{
+    width: 290px;
+}
+
+.tableBody div:nth-child(11)
+{
+    width: 275px;
+}
+
+.tableBody div:nth-child(12)
+{
+    width: 147px;
+}
+
+.tableBody input
+{
+    width: 85px;
+    border: 2px solid rgb(42, 42, 42);
+    border-radius: 25px;
+    background: rgb(42, 42, 42);
+    color: rgb(255, 255, 255);
+    width: 100px;
+    padding: 8px;
+    outline: none;
+    vertical-align: text-top;
+    cursor: pointer;
+}
+
+/*===================================*/
+
+.tableBody input:hover
+{
+    border: 2px solid rgb(207, 83, 0);
+}
+
+.change01
+{
+    width: 510px !important;
+}
+
+.change02
+{
+    width: 380px !important;
+}
+
+.change03
+{
+    width: 55px !important;
+}
+
+.change04
+{
+    width: 255px !important;
+}
+
+.change05
+{
+    width: 255px !important;
+}
+
+.change06
+{
+    width: 255px !important;
+}
+
+.change07
+{
+    width: 255px !important;
+}
+
+.change08
+{
+    width: 255px !important;
+}
+
+.change09
+{
+    width: 255px !important;
+}
+
+.change10
+{
+    width: 255px !important;
+}
+
+.change11
+{
+    width: 125px !important;
 }
