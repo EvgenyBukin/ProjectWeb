@@ -21,6 +21,8 @@ namespace AniClubWeb
 
             //new code 25.07.16
             routes.MapPageRoute("admin_gallery", "admin/gallery", "~/Pages/Admin/AGallery.aspx");
+            //new code 12.08.16
+            routes.MapPageRoute("RegistrationForm", "registrationform", "~/Pages/RegistrationForm.aspx");
         }
     }
 }

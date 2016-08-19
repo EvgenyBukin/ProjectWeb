@@ -1,0 +1,75 @@
+﻿body
+{
+    background: rgb(25, 25, 25);
+}
+
+#headForm
+{
+    display: block;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 30px;
+    font-family: 'Economica';
+}
+
+.nice-form
+{
+    margin-top: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 690px;
+    color: rgb(255, 255, 255);
+}
+
+.nice-form input
+{
+    margin-right: auto;
+    margin-left: auto;
+    border: 2px solid rgb(48, 56, 65);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    background: rgb(48, 56, 65);
+    outline: none;
+    display: block;
+}
+
+#name:focus
+{
+    border: 2px solid rgb(207, 83, 0);
+}
+
+#password:focus
+{
+    border: 2px solid rgb(207, 83, 0);
+}
+
+.nice-form input:nth-child(5)
+{
+    border-radius: 25px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border: 2px solid rgb(48, 56, 65);
+    color: rgb(102, 102, 102);
+    font-size: 15px;
+}
+
+.nice-form input:nth-child(5):hover
+{
+    border: 2px solid rgb(207, 83, 0);
+}
+
+.error
+{
+    margin-bottom: 30px;
+    color: rgb(135, 0, 0);
+}
+
+@font-face {
+  font-family: 'Economica';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Economica'), local('Economica-Regular'), url(/Content/FontsStyle/Economica.woff) format('woff');
+}

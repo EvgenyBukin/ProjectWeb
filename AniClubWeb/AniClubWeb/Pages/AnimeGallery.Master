@@ -23,14 +23,13 @@
 		    <span>a</span><span>n</span><span>i</span><span>c</span><span>l</span><span>u</span><span>b</span> 
 		    <span>g</span><span>a</span><span>l</span><span>l</span><span>e</span><span>r</span><span>y</span>
 	    </div>
-        <div class="nav" id="categories">
-                
-                <div class="LastChangePanel">
-                    <div class="LastChangePanelW">
-                        <span class="specialTxt">New</span>
-                        <asp:ContentPlaceHolder ID="LastChange" runat="server" />
-                    </div>
+        <div class="nav" id="categories">                
+            <div class="LastChangePanel">
+                <div class="LastChangePanelW">
+                    <span class="specialTxt">New</span>
+                    <asp:ContentPlaceHolder ID="LastChange" runat="server" />
                 </div>
+            </div>
         </div>
         <asp:ContentPlaceHolder ID="bodyContent" runat="server" />
         <asp:ContentPlaceHolder ID="PagerList" runat="server" />

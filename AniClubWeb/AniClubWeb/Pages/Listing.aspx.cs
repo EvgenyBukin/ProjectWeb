@@ -3,6 +3,7 @@ using AniClubWeb.Models.Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Web.Security;
 
 namespace AniClubWeb.Pages
 {
@@ -58,6 +59,12 @@ namespace AniClubWeb.Pages
                 Request.QueryString["category"];
             return currentCategory == null ? animes :
                 animes.Where(p => p.Category == currentCategory);
+        }
+
+        protected void SignOut_Click(object sender, EventArgs e)
+        {
+            FormsAuthentication.SignOut();
+            FormsAuthentication.RedirectToLoginPage();
         }
 
         protected void Page_Load(object sender, EventArgs e)

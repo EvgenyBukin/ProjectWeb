@@ -35,9 +35,23 @@
                         <GS:CategoryLinks runat="server" />
 					</div>
                     <div class="logIn">
-                        <input id="name" type="text" placeholder="Name" class="checked" />
-                        <input id="password" type="password" placeholder="Password" class="checked" />
-                        <input type="submit" value="SUBMIT" class="check-button" />
+                        <%
+                            if (Request.IsAuthenticated) {
+                                string UserName = Page.User.Identity.Name.ToString();
+                                Response.Write("<div class='LogInBlock'>" + " <img src='/Content/Img/logWebsite.png'>" +
+                                               "<span class='LogUser'>" + UserName + "</span>" + "</div>");
+                            }
+                            else
+                            {
+                                Response.Write(String.Format(@"
+                                <input name='name' id='name' type='text' placeholder='Name' class='checked' />
+                                <input name='password' id='password' type='password' placeholder='Password' class='checked' />
+                                <input type='submit' value='SUBMIT' class='check-button' />                       
+                                "));
+                            }
+                        %>
+                        <asp:Button ID='Submit1' OnClick='SignOut_Click' Text='Sign Out' runat='server' />
+                        <a href="<%= AnimeUrlRegistrationForm %>" class="registForm">Регистрация</a>
                     </div>
 				</div>
 			</nav>
